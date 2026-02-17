@@ -748,7 +748,7 @@ function Airport_Preferences({help=false, json=false, user=""} = {}){
 	let dict = $.NSMutableDictionary.alloc.initWithContentsOfFile("/Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist");
 	let contents = ObjC.deepUnwrap(dict);
 	output['Known Networks'] = [];
-	if(contents["KnownNetworks"] !== undefined){
+	if(contents !== undefined && contents["KnownNetworks"] !== undefined){
 		let wifi_keys = Object.keys(contents['KnownNetworks']);
 		let hex_to_ssid = {};
 		for(let i in wifi_keys){
