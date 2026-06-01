@@ -1291,3 +1291,5 @@ function Global_Preferences({help=false, json=false, user=""} = {}){
 	output += "\n" + AVEnum(input_parameter);
 	return output;
 }
+
+All_Checks()
